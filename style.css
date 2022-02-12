@@ -1,0 +1,105 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Montserrat;
+    height: 100%;
+    margin: 10px;
+    display: grid;
+    background-image: url("https://i.imgur.com/WdI3dHT.jpg");
+  }
+  
+  body.grid-container {
+    display: grid;
+    justify-content: center;
+    align-items: top;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr;
+    grid-gap: 3px;
+    width: 85%;
+    grid-template-areas: 
+    'top right-top'
+    'left right-bottom';
+  }
+  
+  section.table {
+    grid-area: left;
+    display: grid;
+    background-color: white;
+    border: 3px solid white;
+    grid-template-columns: repeat(3, 20vmin);
+    grid-template-rows: repeat(13, 5vmin);
+    grid-gap: 1vmin;
+    margin: 0 0 70px 170px;
+  }
+  
+  .name {
+    grid-area: top;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    color: lavenderblush;
+    font-style: italic;
+    font-size: auto;
+  }
+  
+  .grn, .blk, .red {
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+  }
+  
+  .grn {
+  background-color: #55BF9B;
+  }
+  
+  .blk {
+  background-color: black;
+  }
+  
+  .red {
+  background-color: red;
+  }
+  
+  .wheel {
+    grid-area: right-bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 2px solid blue;
+    color: black;
+    height: 475px;
+  }
+  
+  .bank {
+    grid-area: right-top;
+    display: grid;
+    background-color: white;
+    border: 2px solid blue;
+    color: black;
+  }
+  
+  #nextSpin {
+    display: flex;
+    background-color: white;
+  }
+  
+  #bal {
+    color: black;
+  }
+  
+  #reset {
+    display: flex;
+    background-color: lightyellow;
+  }
+  
+  #message {
+    border: 2px dashed purple;
+    margin: 3px;
+    height: 24px;
+  }
